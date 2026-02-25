@@ -1,5 +1,4 @@
-import 'package:example/from.dart';
-import 'package:example/from_screen.dart';
+import 'package:example/login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
-      home: Scaffold(backgroundColor: Colors.amber, body: loginscreen()),
+      home: Scaffold(backgroundColor: Colors.amber, body: LoginScreen()),
     );
   }
 }
