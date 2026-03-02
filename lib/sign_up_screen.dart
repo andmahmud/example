@@ -2,16 +2,15 @@ import 'package:example/button.dart';
 import 'package:example/colors.dart';
 import 'package:example/custom_text.dart';
 import 'package:example/input.dart';
-import 'package:example/login_controller.dart';
-import 'package:example/sign_up_screen.dart';
+import 'package:example/login_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LoginScreen extends StatelessWidget {
-  LoginScreen({super.key});
-  final controller = Get.put(LoginController());
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,23 +20,29 @@ class LoginScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(height: 50),
               CustomText(
-                text: "Hey! Welcome back",
+                text: "Create Your Account",
                 fontSize: 24,
                 fontWeight: FontWeight.w700,
               ),
               SizedBox(height: 10),
               CustomText(
-                text: "Sign In to your account",
+                text: "Sign up to your account",
                 fontSize: 16,
                 color: AppColors.textSecondary,
                 fontWeight: FontWeight.w500,
               ),
               SizedBox(height: 40),
-
+              CustomInputField(
+                hintText: "Name",
+                fillColor: Color(0xffFFFFFF),
+                borderRadius: 100,
+                prefixIcon: Icons.email_outlined,
+              ),
+              SizedBox(height: 20),
               CustomInputField(
                 hintText: "Email",
                 fillColor: Color(0xffFFFFFF),
@@ -52,25 +57,19 @@ class LoginScreen extends StatelessWidget {
                 prefixIcon: Icons.lock,
                 suffixWidget: Icon(Icons.remove_red_eye_outlined),
               ),
-              SizedBox(height: 30),
-              GestureDetector(
-                onTap: () {},
-                child: Align(
-                  alignment: Alignment.centerRight,
-                  child: CustomText(
-                    text: "Forgot Password?",
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
+              SizedBox(height: 20),
+              CustomInputField(
+                hintText: "Confirm Password",
+                fillColor: Color(0xffFFFFFF),
+                borderRadius: 100,
+                prefixIcon: Icons.lock,
+                suffixWidget: Icon(Icons.remove_red_eye_outlined),
               ),
               SizedBox(height: 30),
 
               CustomButton(
-                text: "Sign In",
-                onTap: () {
-                  Get.to(() => SignUpScreen());
-                },
+                text: "Sign UP",
+                onTap: () {},
                 borderRadius: BorderRadius.all(Radius.circular(100)),
               ),
               SizedBox(height: 50),
@@ -126,16 +125,16 @@ class LoginScreen extends StatelessWidget {
                       fontSize: 16,
                     ),
                     children: [
-                      const TextSpan(text: 'Don’t have an account? '),
+                      const TextSpan(text: 'Already have an account? '),
                       TextSpan(
-                        text: 'Register',
+                        text: 'Login',
                         style: GoogleFonts.inter(
                           color: AppColors.textPrimary,
                           fontWeight: FontWeight.w600,
                         ),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            Get.to(SignUpScreen());
+                            Get.to(LoginScreen());
                           },
                       ),
                     ],
