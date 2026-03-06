@@ -1,6 +1,7 @@
 import 'package:example/button.dart';
 import 'package:example/colors.dart';
 import 'package:example/custom_text.dart';
+import 'package:example/features/navbar/view/navbar_screen.dart';
 import 'package:example/input.dart';
 import 'package:example/login_controller.dart';
 import 'package:example/sign_up_screen.dart';
@@ -69,7 +70,7 @@ class LoginScreen extends StatelessWidget {
               CustomButton(
                 text: "Sign In",
                 onTap: () {
-                  Get.to(() => SignUpScreen());
+                  Get.to(() => NavBar());
                 },
                 borderRadius: BorderRadius.all(Radius.circular(100)),
               ),
