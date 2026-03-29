@@ -37,7 +37,7 @@ class CustomButton extends StatelessWidget {
     final BorderRadius radius = borderRadius ?? BorderRadius.circular(14);
 
     return Material(
-      color: Colors.black,
+      color: color ?? AppColors.primary,
       borderRadius: radius,
       child: InkWell(
         splashColor: isDisabled
