@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1013903042234",
+    "project_id": "orivixdevs",
+    "storage_bucket": "orivixdevs.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013903042234:android:13fbc3895c636a6d2c4483",
+        "android_client_info": {
+          "package_name": "com.example.example"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVdwq7YROltIRa2YyhaJ84Xo2x4ipgNRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
