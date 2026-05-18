@@ -40,6 +40,7 @@ class LoginScreen extends StatelessWidget {
               SizedBox(height: 40),
 
               CustomInputField(
+                textController: controller.emailcontroller,
                 hintText: "Email",
                 fillColor: Color(0xffFFFFFF),
                 borderRadius: 100,
@@ -47,6 +48,7 @@ class LoginScreen extends StatelessWidget {
               ),
               SizedBox(height: 20),
               CustomInputField(
+                textController: controller.passwordcontroller,
                 hintText: "Password",
                 fillColor: Color(0xffFFFFFF),
                 borderRadius: 100,
@@ -70,7 +72,123 @@ class LoginScreen extends StatelessWidget {
               CustomButton(
                 text: "Sign In",
                 onTap: () {
-                  Get.to(() => NavBar());
+                  controller.signin();
+
+                  // Get.bottomSheet(
+                  //   Container(
+                  //     width: double.infinity,
+                  //     padding: EdgeInsets.all(20),
+                  //     decoration: BoxDecoration(
+                  //       color: Colors.white,
+                  //       borderRadius: BorderRadius.vertical(
+                  //         top: Radius.circular(20),
+                  //       ),
+                  //     ),
+                  //     child: Column(
+                  //       mainAxisSize: MainAxisSize.min,
+                  //       children: [
+                  //         Text("This is Bottom Sheet"),
+                  //         SizedBox(height: 10),
+                  //         ElevatedButton(
+                  //           onPressed: () => Get.back(),
+                  //           child: Text("Close"),
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // );
+
+                  // Get.dialog(
+                  //   AlertDialog(
+
+                  //     title: Text("Custom Dialog"),
+                  //     content: Text("This is custom popup"),
+                  //     actions: [
+                  //       TextButton(
+                  //         onPressed: () => Get.back(),
+                  //         child: Text("Close"),
+                  //       ),
+                  //     ],
+                  //   ),
+                  // );\\
+
+                  // Get.dialog(
+                  //   Center(
+                  //     child: Container(
+                  //       margin: EdgeInsets.symmetric(horizontal: 20),
+                  //       padding: EdgeInsets.all(20),
+                  //       decoration: BoxDecoration(
+                  //         color: Colors.white,
+                  //         borderRadius: BorderRadius.circular(20),
+                  //       ),
+                  //       child: Material(
+                  //         // IMPORTANT (text ripple fix)
+                  //         color: Colors.transparent,
+                  //         child: Column(
+                  //           mainAxisSize: MainAxisSize.min,
+                  //           children: [
+                  //             // 🔴 Icon
+                  //             Container(
+                  //               padding: EdgeInsets.all(12),
+                  //               decoration: BoxDecoration(
+                  //                 color: Colors.red.withOpacity(0.1),
+                  //                 shape: BoxShape.circle,
+                  //               ),
+                  //               child: Icon(
+                  //                 Icons.warning_rounded,
+                  //                 color: Colors.red,
+                  //                 size: 30,
+                  //               ),
+                  //             ),
+
+                  //             SizedBox(height: 15),
+
+                  //             // 📝 Title
+                  //             Text(
+                  //               "Custom Dialog",
+                  //               style: TextStyle(
+                  //                 fontSize: 18,
+                  //                 fontWeight: FontWeight.bold,
+                  //               ),
+                  //             ),
+
+                  //             SizedBox(height: 10),
+
+                  //             // 📄 Content
+                  //             Text(
+                  //               "This is custom popup with container design.",
+                  //               textAlign: TextAlign.center,
+                  //               style: TextStyle(color: Colors.grey),
+                  //             ),
+
+                  //             SizedBox(height: 20),
+
+                  //             // 🔘 Buttons
+                  //             Row(
+                  //               children: [
+                  //                 Expanded(
+                  //                   child: OutlinedButton(
+                  //                     onPressed: () => Get.back(),
+                  //                     child: Text("Cancel"),
+                  //                   ),
+                  //                 ),
+                  //                 SizedBox(width: 10),
+                  //                 Expanded(
+                  //                   child: ElevatedButton(
+                  //                     onPressed: () {
+                  //                       Get.back();
+                  //                     },
+                  //                     child: Text("OK"),
+                  //                   ),
+                  //                 ),
+                  //               ],
+                  //             ),
+                  //           ],
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // );
                 },
                 borderRadius: BorderRadius.all(Radius.circular(100)),
               ),
