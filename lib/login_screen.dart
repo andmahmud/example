@@ -40,6 +40,7 @@ class LoginScreen extends StatelessWidget {
               SizedBox(height: 40),
 
               CustomInputField(
+                textController: controller.emailcontroller,
                 hintText: "Email",
                 fillColor: Color(0xffFFFFFF),
                 borderRadius: 100,
@@ -47,6 +48,7 @@ class LoginScreen extends StatelessWidget {
               ),
               SizedBox(height: 20),
               CustomInputField(
+                textController: controller.passwordcontroller,
                 hintText: "Password",
                 fillColor: Color(0xffFFFFFF),
                 borderRadius: 100,
@@ -70,7 +72,7 @@ class LoginScreen extends StatelessWidget {
               CustomButton(
                 text: "Sign In",
                 onTap: () {
-                  Get.offAll(() => NavBar());
+                  controller.signin();
 
                   // Get.bottomSheet(
                   //   Container(
